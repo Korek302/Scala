@@ -4,16 +4,16 @@ object Test
 {
   def main(args: Array[String])
   {
-    val a = new Operand(2, 3)
+    var c1 = new Calculator
     
-    val b = new Adder(a)
+    println("CALCULATOR")
+    println("Avaliable actions: ")
+		println("+ - add")
+		println("- - substract")
+		println("* - multiply")
+		println("/ - divide")
+		System.out.println("Enter expression: ")
     
-    println(b.operation)
-    
-    val c = new CalculatorGUI
-    
-    val list = c.read
-    
-    println(list.deep.mkString(""))
+		c1.evaluate
   }
 }
