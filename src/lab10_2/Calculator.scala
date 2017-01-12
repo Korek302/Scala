@@ -9,8 +9,27 @@ class Calculator
   def evaluate()
   {
     var l = readLine
-    var onp: Array[AnyVal] = converter.convert(l.toCharArray)
     
+    var list = l.toCharArray()
+    var list2 = Array[AnyVal]()
+    
+    var acc = 0.0
+    var k = 0
+    for(k <- 0 to list.length - 1)
+    {
+      if(list(k) != '+' && list(k) != '-' && list(k) != '*' && list(k) != '/')
+        acc = acc*10 + (list(k)-'0').toDouble
+      else
+      {
+        list2 = list2 :+ acc
+        list2 = list2 :+ list(k)
+        acc = 0.0
+      }
+    }
+    list2 = list2 :+ acc
+    
+    
+    var onp: Array[AnyVal] = converter.convert(list2)
     
     println("RPN representation: " + onp.mkString(" "))
     
