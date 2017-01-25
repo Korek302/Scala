@@ -1,9 +1,13 @@
-package lab13_1
+package list12
 
-class Row(private var matrix1: Array[Array[Int]], private var matrix2: Array[Array[Int]],
-    private var result: Array[Array[Int]], private var index: Int) extends Thread 
+class Row(private var matrix1: Array[Array[Int]],
+          private var matrix2: Array[Array[Int]],
+          private var result: Array[Array[Int]],
+          private var index: Int)
+    extends Thread 
 {
-  override def run(): Unit = 
+
+  override def run()
   {
     if (matrix1(0).length == matrix2.length) 
     {

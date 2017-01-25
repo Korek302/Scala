@@ -1,6 +1,6 @@
 package lab13_1
 
-class Multiplier 
+/*class Multiplier 
 {
   def multiply(matrix1: Array[Array[Int]], matrix2: Array[Array[Int]]): Array[Array[Int]] = 
   {
@@ -13,4 +13,4 @@ class Multiplier
     }
     result
   }
-}
+}*/
